@@ -1,0 +1,12 @@
+On the router with snort installed add the following rules
+to /etc/snort/rules/local_rules
+
+alert tcp  any any -> $HOME_NET 5003 (msg:"Blocked Content";content:"democracy";sid:1000009; rev:1;)
+drop tcp  any any -> $HOME_NET 5003 (msg:"Blocked Content";pcre:"/democracy/i";sid:1000010; rev:1;)
+
+
+alert tcp  any any -> $HOME_NET 5003 (msg:"Blocked Content";content:"block";sid:1000011; rev:1;)
+alert tcp  any any -> $HOME_NET 5003 (msg:"Blocked Content";pcre:"/block/i";sid:1000012; rev:1;)
+
+alert tcp  any any -> $HOME_NET 5003 (msg:"Blocked Content";content:"bomb";sid:1000013; rev:1;)
+alert tcp  any any -> $HOME_NET 5003 (msg:"Blocked Content";content:"terrorism";sid:1000014; rev:1;)

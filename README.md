@@ -1,4 +1,4 @@
-# covert-channel-simulation
+# covert-channel
 The simulation demonstrates the use of a covert channel to avoid automated detection of specific keywords.  Blocking packets based on the presence of certain keywords is a common practice in many countries that enforce online censorship
 
 The infrastrucutre required for the simulation uses 3 virtual machines
